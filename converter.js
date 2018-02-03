@@ -82,11 +82,12 @@ function convert(){
     lines.forEach(function(line,ind,arr){
 	ch = line.match(reg);
 
+
 	for(var i=0; i<ch.length; ++i){
 	    if(ch[i] == "a"){
 		text += map["noC"];
 	    }else if(isVowel(ch[i])){
-		if(i>1 && isConsonant(ch[i-1])){
+		if(i>=1 && isConsonant(ch[i-1])){
 		    text += map[ch[i]];
 		}else{
 		    text += map["noC"] + map[ch[i]];
@@ -108,6 +109,7 @@ function convert(){
 		text += map[ch[i]];
 	    }
 	}
+	
 	text += "<br>";
 
     })
