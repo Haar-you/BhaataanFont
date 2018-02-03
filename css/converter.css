@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Bhaataan;
+    src: url("../Traditional/Bhaataan.woff"); format("woff");
+}
+
 #textarea{
     width: 50%;
     height: 200px;
@@ -5,8 +10,8 @@
     overflow: auto;
 }
 
-#bhaataan{
-    font-family:'Bhaataan';
+#bhaataan{    
+    font-family: Bhaataan;
     border: 1px solid black;
     font-size: large;
     width: 50%;
