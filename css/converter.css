@@ -1,0 +1,21 @@
+#textarea{
+    width: 50%;
+    height: 200px;
+    resize: none;
+    overflow: auto;
+}
+
+#bhaataan{
+    font-family:'Bhaataan';
+    border: 1px solid black;
+    font-size: large;
+    width: 50%;
+    height: 200px;
+}
+
+#divInstruction{
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    
+}
