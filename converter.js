@@ -73,36 +73,43 @@ function isVowel(str){
 function convert(){
     var div = document.getElementById("bhaataan");
     var textarea = document.getElementById("textarea");
-    var ch = textarea.value.match(reg);
+    var lines = textarea.value.split(/\r\n|\r|\n/);
+    var ch = [];
     var text = "";
 
-    for(var i=0; i<ch.length; ++i){
-	if(ch[i] == "a"){
-	    text += map["noC"];
-	}else if(isVowel(ch[i])){
-	    if(i>1 && isConsonant(ch[i-1])){
-		text += map[ch[i]];
-	    }else{
-		text += map["noC"] + map[ch[i]];
-	    }
-	}else if(isConsonant(ch[i])){
-	    if(i<ch.length-1){
-		if(ch[i+1] == "a"){
+    div.innerHTML = "";
+    
+    lines.forEach(function(line,ind,arr){
+	ch = line.match(reg);
+
+	for(var i=0; i<ch.length; ++i){
+	    if(ch[i] == "a"){
+		text += map["noC"];
+	    }else if(isVowel(ch[i])){
+		if(i>1 && isConsonant(ch[i-1])){
 		    text += map[ch[i]];
-		    i+=1;
-		}else if(isVowel(ch[i+1])){
-		    text += map[ch[i]];
+		}else{
+		    text += map["noC"] + map[ch[i]];
+		}
+	    }else if(isConsonant(ch[i])){
+		if(i<ch.length-1){
+		    if(ch[i+1] == "a"){
+			text += map[ch[i]];
+			i+=1;
+		    }else if(isVowel(ch[i+1])){
+			text += map[ch[i]];
+		    }else{
+			text += map[ch[i]] + map["noV"];
+		    }
 		}else{
 		    text += map[ch[i]] + map["noV"];
 		}
 	    }else{
-		text += map[ch[i]] + map["noV"];
+		text += map[ch[i]];
 	    }
-	}else{
-	    text += map[ch[i]];
 	}
-    }
+	text += "<br>";
 
+    })
     div.innerHTML = text;
-
 }
