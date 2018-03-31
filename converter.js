@@ -53,12 +53,12 @@ var map = new Proxy({
     "?\"": String.fromCharCode(0xe02e)
 }, handler);
 
-var regCons = "(dh|kh|gh|ph|bh|t|k|x|s|n|m|d|g|p|b|h|c|s|l|r|j|y|w|ṭ|ḍ|ṇ|ḷ|ṣ)";
+var regCons = "(dh|kh|gh|ph|bh|t|k|x|s|n|m|d|g|p|b|h|c|s|l|r|j|y|w|ṭ|ḍ|ṇ|ḷ|ṣ|z)";
 var regVowel = "(ai|au|a|i|u|e|o|á|í|ú)";
 var regPunc = "(\\?\"| |\"|,|\.|\\?)";
 var reg = new RegExp("("+regCons+"|"+regVowel+"|"+regPunc+")", "g");
 
-var cons = ["dh","kh","gh","ph","bh","t","k","x","s","n","m","d","g","p","b","h","c","s","l","r","j","y","w","ṭ","ḍ","ṇ","ḷ","ṣ"];
+var cons = ["dh","kh","gh","ph","bh","t","k","x","s","n","m","d","g","p","b","h","c","s","l","r","j","y","w","ṭ","ḍ","ṇ","ḷ","ṣ","z"];
 var vowels = ["ai","au","a","i","u","e","o","á","í","ú"];
 
 function isConsonant(str){
