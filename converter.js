@@ -53,12 +53,12 @@ var map = new Proxy({
     "?\"": String.fromCharCode(0xe02e)
 }, handler);
 
-var regCons = "(dh|kh|gh|ph|bh|t|k|x|s|n|m|d|g|p|b|h|c|s|l|r|j|y|w|ṭ|ḍ|ṇ|ḷ|ṣ|z)";
+var regCons = "(dh|kh|gh|ph|bh|t|k|x|s|n|m|d|g|p|b|h|c|z|l|r|j|y|w|ṭ|ḍ|ṇ|ḷ|ṣ)";
 var regVowel = "(ai|au|a|i|u|e|o|á|í|ú)";
 var regPunc = "(\\?\"| |\"|,|\.|\\?)";
 var reg = new RegExp("("+regCons+"|"+regVowel+"|"+regPunc+")", "g");
 
-var cons = ["dh","kh","gh","ph","bh","t","k","x","s","n","m","d","g","p","b","h","c","s","l","r","j","y","w","ṭ","ḍ","ṇ","ḷ","ṣ","z"];
+var cons = ["dh","kh","gh","ph","bh","t","k","x","s","n","m","d","g","p","b","h","c","z","l","r","j","y","w","ṭ","ḍ","ṇ","ḷ","ṣ"];
 var vowels = ["ai","au","a","i","u","e","o","á","í","ú"];
 
 function isConsonant(str){
@@ -77,9 +77,15 @@ function convert(){
     var ch = [];
     var text = "";
 
+    
     div.innerHTML = "";
     
     lines.forEach(function(line,ind,arr){
+	if(line == ""){
+	    text += "<br>";
+	    return;
+	}
+	
 	ch = line.match(reg);
 
 
@@ -112,6 +118,16 @@ function convert(){
 	
 	text += "<br>";
 
-    })
+    });
+    
     div.innerHTML = text;
+}
+
+function changeFont(){
+    var select = document.getElementById("selectFont");
+    var option = select.selectedOptions[0];
+
+    var div = document.getElementById("bhaataan");    
+
+    div.style.fontFamily = option.value;
 }
