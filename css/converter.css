@@ -1,6 +1,8 @@
 @font-face{
     font-family: Bhaataan;
-    src: url("../Traditional/Bhaataan.woff"); format("woff");
+    src:
+    local("Bhaataan-SanSerif2"),
+    url("../Traditional/Sans-serif/Bhaataan.woff"); format("woff");
 }
 
 #textarea{
