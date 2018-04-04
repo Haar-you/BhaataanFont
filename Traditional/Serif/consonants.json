@@ -1,0 +1,1112 @@
+[
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 220, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe000", 
+        "chrnm": "bhaataan_a", 
+        "file": "./glyphs/a.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 520, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 520, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 520, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 520, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 520, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 120, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe001", 
+        "chrnm": "bhaataan_ta", 
+        "file": "./glyphs/ta.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 190, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe002", 
+        "chrnm": "bhaataan_ka", 
+        "file": "./glyphs/ka.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 190, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe003", 
+        "chrnm": "bhaataan_xa", 
+        "file": "./glyphs/xa.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 270, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe004", 
+        "chrnm": "bhaataan_sa", 
+        "file": "./glyphs/sa.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 360, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 360, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 360, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 360, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 360, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 250, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe005", 
+        "chrnm": "bhaataan_na", 
+        "file": "./glyphs/na.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 420, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 420, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 420, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 420, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 420, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 370, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe006", 
+        "chrnm": "bhaataan_ma", 
+        "file": "./glyphs/ma.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 460, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 240, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe007", 
+        "chrnm": "bhaataan_da", 
+        "file": "./glyphs/da.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 400, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe008", 
+        "chrnm": "bhaataan_ga", 
+        "file": "./glyphs/ga.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 320, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe009", 
+        "chrnm": "bhaataan_pa", 
+        "file": "./glyphs/pa.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 280, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe00a", 
+        "chrnm": "bhaataan_ba", 
+        "file": "./glyphs/ba.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 400, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 120, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe00b", 
+        "chrnm": "bhaataan_ha", 
+        "file": "./glyphs/ha.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 260, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe00c", 
+        "chrnm": "bhaataan_ca", 
+        "file": "./glyphs/ca.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 570, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 570, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 570, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 570, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 570, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 160, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe00d", 
+        "chrnm": "bhaataan_za", 
+        "file": "./glyphs/za.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 120, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe00e", 
+        "chrnm": "bhaataan_la", 
+        "file": "./glyphs/la.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 440, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 440, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 440, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 440, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 440, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 120, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe00f", 
+        "chrnm": "bhaataan_ra", 
+        "file": "./glyphs/ra.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 120, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe010", 
+        "chrnm": "bhaataan_ja", 
+        "file": "./glyphs/ja.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 120, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe011", 
+        "chrnm": "bhaataan_ya", 
+        "file": "./glyphs/ya.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 350, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 350, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 350, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 350, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 350, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 280, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe012", 
+        "chrnm": "bhaataan_wa", 
+        "file": "./glyphs/wa.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 530, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 200, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe013", 
+        "chrnm": "bhaataan_dha", 
+        "file": "./glyphs/dha.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 240, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe014", 
+        "chrnm": "bhaataan_kha", 
+        "file": "./glyphs/kha.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 560, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 560, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 560, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 560, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 560, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 260, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe015", 
+        "chrnm": "bhaataan_gha", 
+        "file": "./glyphs/gha.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 370, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 310, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe016", 
+        "chrnm": "bhaataan_pha", 
+        "file": "./glyphs/pha.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 340, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe017", 
+        "chrnm": "bhaataan_bha", 
+        "file": "./glyphs/bha.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 150, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe018", 
+        "chrnm": "bhaataan_tra", 
+        "file": "./glyphs/tra.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 550, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 200, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe019", 
+        "chrnm": "bhaataan_dra", 
+        "file": "./glyphs/dra.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 580, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 580, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 580, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 580, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 580, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 320, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe01a", 
+        "chrnm": "bhaataan_nra", 
+        "file": "./glyphs/nra.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 380, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 270, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe01b", 
+        "chrnm": "bhaataan_lra", 
+        "file": "./glyphs/lra.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 590, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 200, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe01c", 
+        "chrnm": "bhaataan_sra", 
+        "file": "./glyphs/sra.svg"
+    }, 
+    {
+        "anchors": [
+            {
+                "name": "vowel_aa", 
+                "x": 450, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_u", 
+                "x": 450, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_uu", 
+                "x": 450, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_ai", 
+                "x": 450, 
+                "y": 250
+            }, 
+            {
+                "name": "no_vowel", 
+                "x": 450, 
+                "y": 250
+            }, 
+            {
+                "name": "vowel_e", 
+                "x": 300, 
+                "y": 750
+            }
+        ], 
+        "cdpnt": "0xe01d", 
+        "chrnm": "bhaataan_cra", 
+        "file": "./glyphs/cra.svg"
+    }
+]
