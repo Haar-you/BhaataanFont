@@ -1,0 +1,13 @@
+@font-face{
+    font-family: Bhaataan;
+    src:
+    local("Bhaataan"),
+    url("../Traditional/Sans-serif/Bhaataan.woff") format("woff");
+}
+
+@font-face{
+    font-family: BhaataanSerif;
+    src:
+    local("BhaataanSerif"),
+    url("../Traditional/Serif/BhaataanSerif.woff") format("woff");
+}

@@ -30,16 +30,24 @@ var map = new Proxy({
     "ph": String.fromCharCode(0xe016),
     "bh": String.fromCharCode(0xe017),
     "ṭ": String.fromCharCode(0xe018),
+    "ṭ": String.fromCharCode(0xe018), //t + U+0323
     "ḍ": String.fromCharCode(0xe019),
+    "ḍ": String.fromCharCode(0xe019), //d + U+0323
     "ṇ": String.fromCharCode(0xe01a),
+    "ṇ": String.fromCharCode(0xe01a), //n + U+0323
     "ḷ": String.fromCharCode(0xe01b),
+    "ḷ": String.fromCharCode(0xe01b), //l + U+0323
     "ṣ": String.fromCharCode(0xe01d),
+    "ṣ": String.fromCharCode(0xe01d), //s + U+0323
 
     "i": String.fromCharCode(0xe020),
     "u": String.fromCharCode(0xe021),
     "á": String.fromCharCode(0xe022),
+    "á": String.fromCharCode(0xe022), //a + U+0301
     "í": String.fromCharCode(0xe023),
+    "í": String.fromCharCode(0xe023), //i + U+0301
     "ú": String.fromCharCode(0xe024),
+    "ú": String.fromCharCode(0xe024), //u + U+0301
     "e": String.fromCharCode(0xe025),
     "o": String.fromCharCode(0xe026),
     "ai": String.fromCharCode(0xe027),
@@ -53,13 +61,13 @@ var map = new Proxy({
     "?\"": String.fromCharCode(0xe02e)
 }, handler);
 
-var regCons = "(dh|kh|gh|ph|bh|t|k|x|s|n|m|d|g|p|b|h|c|z|l|r|j|y|w|ṭ|ḍ|ṇ|ḷ|ṣ)";
-var regVowel = "(ai|au|a|i|u|e|o|á|í|ú)";
+var regCons = "(dh|kh|gh|ph|bh|ṭ|ḍ|ṇ|ḷ|ṣ|t|k|x|s|n|m|d|g|p|b|h|c|z|l|r|j|y|w|ṭ|ḍ|ṇ|ḷ|ṣ)";
+var regVowel = "(ai|au|á|í|ú|a|i|u|e|o|á|í|ú)";
 var regPunc = "(\\?\"| |\"|,|\.|\\?)";
-var reg = new RegExp("("+regCons+"|"+regVowel+"|"+regPunc+")", "g");
+var reg = new RegExp(`(${regCons}|${regVowel}|${regPunc})`, "g");
 
-var cons = ["dh","kh","gh","ph","bh","t","k","x","s","n","m","d","g","p","b","h","c","z","l","r","j","y","w","ṭ","ḍ","ṇ","ḷ","ṣ"];
-var vowels = ["ai","au","a","i","u","e","o","á","í","ú"];
+var cons = ["dh","kh","gh","ph","bh","ṭ","ḍ","ṇ","ḷ","ṣ","t","k","x","s","n","m","d","g","p","b","h","c","z","l","r","j","y","w","ṭ","ḍ","ṇ","ḷ","ṣ"];
+var vowels = ["ai","au","a","i","u","e","o","á","í","ú","á","í","ú"];
 
 function isConsonant(str){
     return (cons.indexOf(str) != -1);
@@ -76,7 +84,6 @@ function convert(){
     var lines = textarea.value.split(/\r\n|\r|\n/);
     var ch = [];
     var text = "";
-
     
     div.innerHTML = "";
     
@@ -93,18 +100,15 @@ function convert(){
 	    if(ch[i] == "a"){
 		text += map["noC"];
 	    }else if(isVowel(ch[i])){
-		if(i>=1 && isConsonant(ch[i-1])){
-		    text += map[ch[i]];
-		}else{
-		    text += map["noC"] + map[ch[i]];
-		}
+		text += map["noC"] + map[ch[i]];
 	    }else if(isConsonant(ch[i])){
 		if(i<ch.length-1){
 		    if(ch[i+1] == "a"){
 			text += map[ch[i]];
 			i+=1;
 		    }else if(isVowel(ch[i+1])){
-			text += map[ch[i]];
+			text += map[ch[i]] + map[ch[i+1]];
+			i+=1;
 		    }else{
 			text += map[ch[i]] + map["noV"];
 		    }
@@ -131,3 +135,8 @@ function changeFont(){
 
     div.style.fontFamily = option.value;
 }
+
+window.addEventListener("load", function(){
+    changeFont();    
+});
+
