@@ -115,6 +115,11 @@ function convert(){
 		}else{
 		    text += map[ch[i]] + map["noV"];
 		}
+	    }else if(ch[i] == "." || ch[i] == ","){
+		text += map[ch[i]];
+		if(i<ch.length-1 && ch[i+1] == " "){
+		    ++i;
+		}
 	    }else{
 		text += map[ch[i]];
 	    }
