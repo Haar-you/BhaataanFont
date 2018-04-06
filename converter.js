@@ -53,6 +53,7 @@ var map = new Proxy({
     "ai": String.fromCharCode(0xe027),
     "au": String.fromCharCode(0xe028),
     "noV": String.fromCharCode(0xe029),
+    "aq": String.fromCharCode(0xe02f),
 
     ".": String.fromCharCode(0xe02a),
     ",": String.fromCharCode(0xe02b),
@@ -63,7 +64,7 @@ var map = new Proxy({
 
 var regCons = "(dh|kh|gh|ph|bh|ṭ|ḍ|ṇ|ḷ|ṣ|t|k|x|s|n|m|d|g|p|b|h|c|z|l|r|j|y|w|ṭ|ḍ|ṇ|ḷ|ṣ)";
 var regVowel = "(ai|au|á|í|ú|a|i|u|e|o|á|í|ú)";
-var regPunc = "(\\?\"| |\"|,|\.|\\?)";
+var regPunc = "(\\?\"| |\"|,|\\.|\\?)";
 var reg = new RegExp(`(${regCons}|${regVowel}|${regPunc})`, "g");
 
 var cons = ["dh","kh","gh","ph","bh","ṭ","ḍ","ṇ","ḷ","ṣ","t","k","x","s","n","m","d","g","p","b","h","c","z","l","r","j","y","w","ṭ","ḍ","ṇ","ḷ","ṣ"];
@@ -77,13 +78,22 @@ function isVowel(str){
     return (vowels.indexOf(str) != -1);
 }
 
-
 function convert(){
+    var form = document.getElementById("formSystem");
+
+    switch(form.radioSystem.value){
+    case "traditional": convertTraditional(); break;
+    case "modern": convertModern(); break;
+    }
+}
+
+function convertModern(){
     var div = document.getElementById("bhaataan");
     var textarea = document.getElementById("textarea");
     var lines = textarea.value.split(/\r\n|\r|\n/);
     var ch = [];
     var text = "";
+    var abbr = document.getElementById("checkAbbr").checked;
     
     div.innerHTML = "";
     
@@ -95,20 +105,121 @@ function convert(){
 	
 	ch = line.match(reg);
 
-
 	for(var i=0; i<ch.length; ++i){
 	    if(ch[i] == "a"){
 		text += map["noC"];
+
+		if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+		    text += map["aq"];
+		    ++i;
+		}
+		
 	    }else if(isVowel(ch[i])){
 		text += map["noC"] + map[ch[i]];
+
+		if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+		    text += map["noV"];
+		    ++i;
+		}
+		
 	    }else if(isConsonant(ch[i])){
 		if(i<ch.length-1){
 		    if(ch[i+1] == "a"){
 			text += map[ch[i]];
-			i+=1;
+			++i;
+
+			if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+			    text += map["noC"] + map["aq"];
+			    ++i;
+			}
+			
+		    }else if(isVowel(ch[i+1])){
+			text += map[ch[i]] + map["noC"] + map[ch[i+1]];
+			++i;
+
+			if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+			    text += map["noV"];
+			    ++i;
+			}
+			
+		    }else{
+			text += map[ch[i]] + map["noC"] + map["noV"];
+		    }
+		}else{
+		    text += map[ch[i]] + map["noC"] + map["noV"];
+		}
+	    }else if(ch[i] == "." || ch[i] == ","){
+		text += map[ch[i]];
+		if(i<ch.length-1 && ch[i+1] == " "){
+		    ++i;
+		}
+	    }else{
+		text += map[ch[i]];
+	    }
+	}
+	
+	text += "<br>";
+
+    });
+    
+    div.innerHTML = text;
+}
+
+function convertTraditional(){
+    var div = document.getElementById("bhaataan");
+    var textarea = document.getElementById("textarea");
+    var lines = textarea.value.split(/\r\n|\r|\n/);
+    var ch = [];
+    var text = "";
+    var abbr = document.getElementById("checkAbbr").checked;
+    
+    div.innerHTML = "";
+    
+    lines.forEach(function(line,ind,arr){
+	if(line == ""){
+	    text += "<br>";
+	    return;
+	}
+	
+	ch = line.match(reg);
+
+	for(var i=0; i<ch.length; ++i){
+	    if(ch[i] == "a"){
+		text += map["noC"];
+
+		if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+		    text += map["aq"];
+		    ++i;
+		}
+		
+	    }else if(isVowel(ch[i])){
+		text += map["noC"] + map[ch[i]];
+
+		if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+		    text += map["noV"];
+		    ++i;
+		}
+		
+	    }else if(isConsonant(ch[i])){
+		if(i<ch.length-1){
+		    if(ch[i+1] == "a"){
+			text += map[ch[i]];
+			++i;
+
+			if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+			    text += map["aq"];
+			    ++i;
+			}
+			
 		    }else if(isVowel(ch[i+1])){
 			text += map[ch[i]] + map[ch[i+1]];
-			i+=1;
+			++i;
+
+			if(abbr && ch.length-i>2 && isConsonant(ch[i+1]) && ch[i+1] == ch[i+2]){
+			    text += map["noV"];
+			    ++i;
+			}
+			
 		    }else{
 			text += map[ch[i]] + map["noV"];
 		    }
