@@ -10,6 +10,10 @@ def test():
     pass;
 
 
+bht_consonants = ["a", "ta", "ka", "xa", "sa", "na", "ma", "da", "ga", "pa", "ba", "ha", "ca", "za", "la", "ra", "ja", "ya", "wa", "dha", "kha", "gha", "pha", "bha", "tra", "dra", "nra", "lra", "sra", "cra"];
+bht_vowels =["i", "u", "aa", "ii", "uu", "e", "o", "ai", "au"];
+
+
 
 def add_basic_consonants(font):
     f = open("consonants.json", "r");
@@ -39,6 +43,8 @@ def add_basic_consonants(font):
         for anchor in anchors:
             gl.addAnchorPoint(anchor["name"], "base", anchor["x"], anchor["y"]);
 
+        gl.addAnchorPoint("vowel_aq", "base", gl.width/2, 250);
+
         
 
 def add_vowel_i(font):
@@ -46,9 +52,10 @@ def add_vowel_i(font):
     gl.importOutlines("./glyphs/i.svg");
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
+    gl.addAnchorPoint("no_vowel", "base", 0, 250);
     
     gl = font[0xe020];
-    gl.addReference("bhaataan_i_raw");
+    gl.addReference("bhaataan_i_raw", psMat.translate(450,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_i_raw");
         
@@ -58,9 +65,10 @@ def add_vowel_ii(font):
     gl.importOutlines("./glyphs/ii.svg");
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
+    gl.addAnchorPoint("no_vowel", "base", 110, 250);
     
     gl = font[0xe023];
-    gl.addReference("bhaataan_ii_raw");
+    gl.addReference("bhaataan_ii_raw", psMat.translate(350,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_ii_raw");
 
@@ -69,9 +77,10 @@ def add_vowel_au(font):
     gl.importOutlines("./glyphs/au.svg");
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
+    gl.addAnchorPoint("no_vowel", "base", 290, 250);
     
     gl = font[0xe028];
-    gl.addReference("bhaataan_au_raw");
+    gl.addReference("bhaataan_au_raw", psMat.translate(150,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_au_raw");
 
@@ -84,9 +93,15 @@ def add_vowel_u(font):
     gl.right_side_bearing = 0;
     gl.width = 0;
     gl.addAnchorPoint("vowel_u", "mark", 230, 250);
-    
+
+    gl = font["bhaataan_uq_raw"];
+    gl.addReference("bhaataan_u_raw", psMat.translate(200, 0));
+    gl.addReference("bhaataan_no_vowel_raw");
+    gl.addAnchorPoint("vowel_u", "mark", 430, 250);
+    gl.addPosSub("VQ_liga-1", ("bhaataan_u_raw", "bhaataan_no_vowel_raw"));
+  
     gl = font[0xe021];
-    gl.addReference("bhaataan_u_raw");
+    gl.addReference("bhaataan_u_raw", psMat.translate(400,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_u_raw");
 
@@ -98,9 +113,15 @@ def add_vowel_aa(font):
     gl.right_side_bearing = 0;
     gl.width = 0;
     gl.addAnchorPoint("vowel_aa", "mark", 200, 250);
+
+    gl = font["bhaataan_aaq_raw"];
+    gl.addReference("bhaataan_aa_raw", psMat.translate(150, 0));
+    gl.addReference("bhaataan_no_vowel_raw");
+    gl.addAnchorPoint("vowel_aa", "mark", 350, 250);
+    gl.addPosSub("VQ_liga-1", ("bhaataan_aa_raw", "bhaataan_no_vowel_raw"));
     
     gl = font[0xe022];
-    gl.addReference("bhaataan_aa_raw");
+    gl.addReference("bhaataan_aa_raw", psMat.translate(400,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_aa_raw");
 
@@ -111,9 +132,15 @@ def add_vowel_uu(font):
     gl.right_side_bearing = 0;
     gl.width = 0;
     gl.addAnchorPoint("vowel_uu", "mark", 310, 250);
+
+    gl = font["bhaataan_uuq_raw"];
+    gl.addReference("bhaataan_uu_raw", psMat.translate(200, 0));
+    gl.addReference("bhaataan_no_vowel_raw");
+    gl.addAnchorPoint("vowel_uu", "mark", 510, 250);
+    gl.addPosSub("VQ_liga-1", ("bhaataan_uu_raw", "bhaataan_no_vowel_raw"));
     
     gl = font[0xe024];
-    gl.addReference("bhaataan_uu_raw");
+    gl.addReference("bhaataan_uu_raw", psMat.translate(400,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_uu_raw");
 
@@ -126,7 +153,7 @@ def add_vowel_e(font):
     gl.addAnchorPoint("vowel_e", "mark", 0, 750);
     
     gl = font[0xe025];
-    gl.addReference("bhaataan_e_raw");
+    gl.addReference("bhaataan_e_raw", psMat.translate(400,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_e_raw");
 
@@ -137,10 +164,16 @@ def add_vowel_ai(font):
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
     gl.width = 0;
-    gl.addAnchorPoint("vowel_ai", "mark", 180, 250);
+    gl.addAnchorPoint("vowel_ai", "mark", 220, 250);
+
+    gl = font["bhaataan_aiq_raw"];
+    gl.addReference("bhaataan_ai_raw", psMat.translate(200, 0));
+    gl.addReference("bhaataan_no_vowel_raw");
+    gl.addAnchorPoint("vowel_ai", "mark", 420, 250);
+    gl.addPosSub("VQ_liga-1", ("bhaataan_ai_raw", "bhaataan_no_vowel_raw"));
     
     gl = font[0xe027];
-    gl.addReference("bhaataan_ai_raw");
+    gl.addReference("bhaataan_ai_raw", psMat.translate(400,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_ai_raw");
 
@@ -153,7 +186,7 @@ def add_vowel_no(font):
     gl.addAnchorPoint("no_vowel", "mark", 130, 250);
     
     gl = font[0xe029];
-    gl.addReference("bhaataan_no_vowel_raw");
+    gl.addReference("bhaataan_no_vowel_raw", psMat.translate(400,0));
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_no_vowel_raw");
 
@@ -167,7 +200,20 @@ def add_vowel_o(font):
     gl.addReference("bhaataan_o_raw");
     gl.addReference("dotted_circle");
     gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_o_raw");
-    
+
+def add_vowel_aq(font):
+    gl = font["bhaataan_aq_raw"];
+    gl.importOutlines("./glyphs/aq.svg");
+    gl.left_side_bearing = 0;
+    gl.right_side_bearing = 0;
+    gl.width = 0;
+    gl.addAnchorPoint("vowel_aq", "mark", 220, 250);
+
+    gl = font[0xe02f];
+    gl.addReference("bhaataan_aq_raw", psMat.translate(400,0));
+    gl.addReference("dotted_circle");
+    gl.addPosSub("dottedcircled_to_raw-1", "bhaataan_aq_raw");
+
 
 def add_vowels(font):
 
@@ -181,6 +227,9 @@ def add_vowels(font):
     font.createChar(0xe027, "bhaataan_ai");
     font.createChar(0xe028, "bhaataan_au");
     font.createChar(0xe029, "bhaataan_no_vowel");
+
+    font.createChar(0xe02f, "bhaataan_aq");
+
     
     font.createChar(-1, "bhaataan_i_raw");
     font.createChar(-1, "bhaataan_u_raw");
@@ -193,6 +242,14 @@ def add_vowels(font):
     font.createChar(-1, "bhaataan_au_raw");
     font.createChar(-1, "bhaataan_no_vowel_raw");
 
+
+    font.createChar(-1, "bhaataan_uq_raw");
+    font.createChar(-1, "bhaataan_aaq_raw");
+    font.createChar(-1, "bhaataan_uuq_raw");
+    font.createChar(-1, "bhaataan_aiq_raw");
+    font.createChar(-1, "bhaataan_aq_raw");
+
+    add_vowel_aq(font);
 
     add_vowel_i(font);
     add_vowel_u(font);
@@ -221,7 +278,7 @@ def add_punctuations(font):
     #0x0020 space
     font.createChar(0x0020, "space");
     gl = font[0x0020];
-    gl.width = 500;
+    gl.width = 200;
 
     #0xe02a bhaataan_period
     font.createChar(0xe02a, "bhaataan_period");
@@ -256,17 +313,19 @@ def add_punctuations(font):
     gl = font[0xe02e];
     gl.importOutlines("./glyphs/quotation_question.svg");
     gl.left_side_bearing = 100;
-    gl.right_side_bearing = 100;    
+    gl.right_side_bearing = 100;
     
 def add_anchorclasses(font):
-    font.addLookup("mark", "gpos_mark2base", (), (("mark", (("dflt", ("dflt")),)),));
-    font.addLookupSubtable("mark", "mark_subtable-1");
-    font.addAnchorClass("mark_subtable-1", "vowel_u");
-    font.addAnchorClass("mark_subtable-1", "vowel_aa");
-    font.addAnchorClass("mark_subtable-1", "vowel_uu");
-    font.addAnchorClass("mark_subtable-1", "vowel_e");
-    font.addAnchorClass("mark_subtable-1", "vowel_ai");
-    font.addAnchorClass("mark_subtable-1", "no_vowel");
+    font.addLookup("mark1", "gpos_mark2base", (), (("mark", (("dflt", ("dflt")),)),));
+    font.addLookupSubtable("mark1", "mark1-1");
+    font.addAnchorClass("mark1-1", "vowel_u");
+    font.addAnchorClass("mark1-1", "vowel_aa");
+    font.addAnchorClass("mark1-1", "vowel_uu");
+    font.addAnchorClass("mark1-1", "vowel_e");
+    font.addAnchorClass("mark1-1", "vowel_ai");
+    font.addAnchorClass("mark1-1", "no_vowel");
+    font.addAnchorClass("mark1-1", "vowel_aq");
+
 
 def add_substitution(font):
     font.addLookup("dottedcircled_to_raw", "gsub_single", (), (("", (("dflt", ("dflt")),)),));
@@ -275,15 +334,35 @@ def add_substitution(font):
     font.addLookup("C_o_to_Co", "gsub_ligature", (), (("ccmp", (("dflt", ("dflt")),)),));
     font.addLookupSubtable("C_o_to_Co", "C_o_to_Co-1");
 
+    font.addLookup("VQ_liga", "gsub_ligature", (), (("ccmp", (("dflt", ("dflt")),)),));
+    font.addLookupSubtable("VQ_liga", "VQ_liga-1");
     
-def add_contextual(font):
-    consonants = " ".join(map(lambda c: "bhaataan_%s"%c ,["a", "ta", "ka", "xa", "sa", "na", "ma", "da", "ga", "pa", "ba", "ha", "ca", "za", "la", "ra", "ja", "ya", "wa", "dha", "kha", "gha", "pha", "bha", "tra", "dra", "nra", "lra", "sra", "cra"]));
-    vowels = " ".join(map(lambda c: "bhaataan_%s"%c, ["i", "u", "aa", "ii", "uu", "e", "o", "ai", "au", "no_vowel"]));
+def add_contextual_chaining(font):
+    consonants = " ".join(map(lambda c: "bhaataan_%s"%c, bht_consonants));
+    vowels_nvmark = " ".join(map(lambda c: "bhaataan_%s"%c, bht_vowels + ["no_vowel"])); #nv = no vowel
+    vowels = " ".join(map(lambda c: "bhaataan_%s"%c, bht_vowels));
     
     font.addLookup("contextualSub1", "gsub_contextchain", (), (("calt", (("dflt", ("dflt")),)),));
     font.addContextualSubtable("contextualSub1", "contextualSub1-1", "coverage",
-                               "[%s] | [%s]@<dottedcircled_to_raw> |" % (consonants, vowels));
+                               "[%s] | [%s]@<dottedcircled_to_raw> |" % (consonants, vowels_nvmark + " bhaataan_aq"));
 
+    font.addLookup("contextualSub2", "gsub_contextchain", (), (("calt", (("dflt", ("dflt")),)),));
+    font.addContextualSubtable("contextualSub2", "contextualSub2-1", "coverage",
+                               "[%s] | [%s]@<dottedcircled_to_raw> [%s]@<dottedcircled_to_raw> |" % (consonants, vowels, "bhaataan_no_vowel"));
+
+    
+
+    consonants_with_o = " ".join(map(lambda c: "bhaataan_%s_with_o"%c, bht_consonants));
+    character_with_bar = " ".join([consonants, consonants_with_o, (" ".join(["bhaataan_i_raw", "bhaataan_ii_raw", "bhaataan_au_raw"]))])
+    character_mark = " ".join(["bhaataan_u_raw", "bhaataan_aa_raw", "bhaataan_uu_raw", "bhaataan_e_raw", "bhaataan_ai_raw", "bhaataan_no_vowel_raw", "bhaataan_uq_raw", "bhaataan_aaq_raw", "bhaataan_uuq_raw", "bhaataan_aiq_raw", "bhaataan_aq_raw"])
+    
+    font.addLookup("contextualPos1", "gpos_contextchain", (),(("calt", (("dflt", ("dflt")),)),));
+    font.addContextualSubtable("contextualPos1", "contextualPos1-1", "coverage",
+                               "[%s] [%s] | [%s]@<singlepos1> |" % (character_with_bar, character_mark, character_with_bar));
+
+    font.addLookup("contextualPos2", "gpos_contextchain", (),(("calt", (("dflt", ("dflt")),)),));
+    font.addContextualSubtable("contextualPos2", "contextualPos2-1", "coverage",
+                               "[%s] [%s] [%s] | [%s]@<singlepos1> |" % (character_with_bar, character_mark, character_mark, character_with_bar));
 
 def add_kerning(font):
     
@@ -293,15 +372,18 @@ def add_kerning(font):
     font.addLookup("kerning1", "gpos_pair", (), (("kern", (("dflt", ("dflt")),)),));
     font.addKerningClass("kerning1", "kerning1-1",
                          [consonants + consonants_with_o + ["bhaataan_i_raw", "bhaataan_ii_raw", "bhaataan_au_raw"]],
-                         [consonants + consonants_with_o, ["bhaataan_i_raw"], ["bhaataan_ii_raw"], ["bhaataan_au_raw"]],
+                         [[], consonants + consonants_with_o, ["bhaataan_i_raw"], ["bhaataan_ii_raw"], ["bhaataan_au_raw"]],
                          [
-                             -100,
-                             -260,
-                             -350,
-                             -516
+                             0, -100, -270, -350, -530
                          ]
     );
 
+    font.addLookup("singlepos1", "gpos_single", (), (("", (("dflt", ("dflt")),)),));
+    font.addLookupSubtable("singlepos1", "singlepos1-1");
+    for c in consonants + consonants_with_o + ["bhaataan_i_raw", "bhaataan_ii_raw", "bhaataan_au_raw"]:
+        gl = font[c];
+        gl.addPosSub("singlepos1-1", -100, 0, -100, 0);
+    
 
 def add_with_o_consonants(font):
     consonants = map(lambda c: "bhaataan_%s"%c ,["a", "ta", "ka", "xa", "sa", "na", "ma", "da", "ga", "pa", "ba", "ha", "ca", "za", "la", "ra", "ja", "ya", "wa", "dha", "kha", "gha", "pha", "bha", "tra", "dra", "nra", "lra", "sra", "cra"]);
@@ -312,6 +394,12 @@ def add_with_o_consonants(font):
         gl = font[name];
         gl.addReference("bhaataan_o_raw");
         gl.addReference(consonant, psMat.translate(260,0));
+
+        for anc in font[consonant].anchorPoints:
+            if anc[0] == "no_vowel":
+                gl.addAnchorPoint("no_vowel", "base", 260 + anc[2], 250);
+                break;
+
 
         gl.left_side_bearing = 0;
         gl.right_side_bearing = 0;
@@ -342,7 +430,7 @@ def main():
     
     
     add_kerning(font);
-    add_contextual(font);
+    add_contextual_chaining(font);
     
 
     font.save("BhaataanSerif");
