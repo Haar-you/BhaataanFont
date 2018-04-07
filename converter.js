@@ -150,7 +150,7 @@ function convertModern(){
 		}
 	    }else if(ch[i] == "." || ch[i] == ","){
 		text += map[ch[i]];
-		if(i<ch.length-1 && ch[i+1] == " "){
+		if(ch[i+1] == " " && !(ch[i+2] == "\"" || ch[i+2] == "?\"")){
 		    ++i;
 		}
 	    }else{
@@ -228,7 +228,7 @@ function convertTraditional(){
 		}
 	    }else if(ch[i] == "." || ch[i] == ","){
 		text += map[ch[i]];
-		if(i<ch.length-1 && ch[i+1] == " "){
+		if(ch[i+1] == " " && !(ch[i+2] == "\"" || ch[i+2] == "?\"")){
 		    ++i;
 		}
 	    }else{
@@ -246,13 +246,12 @@ function convertTraditional(){
 function changeFont(){
     var select = document.getElementById("selectFont");
     var option = select.selectedOptions[0];
-
     var div = document.getElementById("bhaataan");    
 
     div.style.fontFamily = option.value;
 }
 
 window.addEventListener("load", function(){
-    changeFont();    
+    changeFont();
 });
 
