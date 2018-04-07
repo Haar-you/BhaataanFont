@@ -164,12 +164,12 @@ def add_vowel_ai(font):
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
     gl.width = 0;
-    gl.addAnchorPoint("vowel_ai", "mark", 220, 250);
+    gl.addAnchorPoint("vowel_ai", "mark", 140, 250);
 
     gl = font["bhaataan_aiq_raw"];
     gl.addReference("bhaataan_ai_raw", psMat.translate(200, 0));
     gl.addReference("bhaataan_no_vowel_raw");
-    gl.addAnchorPoint("vowel_ai", "mark", 420, 250);
+    gl.addAnchorPoint("vowel_ai", "mark", 340, 250);
     gl.addPosSub("VQ_liga-1", ("bhaataan_ai_raw", "bhaataan_no_vowel_raw"));
     
     gl = font[0xe027];
