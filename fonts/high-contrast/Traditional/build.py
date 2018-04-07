@@ -413,9 +413,9 @@ def add_with_o_consonants(font):
 def main():
     font = fontforge.font();
     font.encoding = "UnicodeBmp";
-    font.familyname = "BhaataanSerif";
-    font.fontname = "BhaataanSerif";
-    font.fullname = "BhaataanSerif";
+    font.familyname = "Bhaataan-HighContrast";
+    font.fontname = "Bhaataan-HighContrast";
+    font.fullname = "Bhaataan-HighContrast";
 
     font.ascent = 1000;
     font.descent = 0;
@@ -433,9 +433,9 @@ def main():
     add_contextual_chaining(font);
     
 
-    font.save("BhaataanSerif");
-    font.generate("BhaataanSerif.ttf");
-    font.generate("BhaataanSerif.woff");
+    font.save("Bhaataan-HighContrast");
+    font.generate("Bhaataan-HighContrast.ttf");
+    font.generate("Bhaataan-HighContrast.woff");
 
 
     

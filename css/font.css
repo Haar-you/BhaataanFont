@@ -6,8 +6,8 @@
 }
 
 @font-face{
-    font-family: BhaataanSerif;
+    font-family: Bhaataan-HighContrast;
     src:
-    local("BhaataanSerif"),
-    url("../fonts/Serif/Traditional/BhaataanSerif.woff") format("woff");
+    local("Bhaataan-HighConstrast"),
+    url("../fonts/high-contrast/Traditional/Bhaataan-HighContrast.woff") format("woff");
 }

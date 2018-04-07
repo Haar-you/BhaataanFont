@@ -26,7 +26,6 @@ range(0xe020, 0xe028).map(v => String.fromCharCode(c, v, 0xe029))
     
     text += `<div>${range(0xe02a, 0xe02e).map(x => String.fromCharCode(x)).join("")}</div>`;
 
-
     div.innerHTML = text;
 
 });
