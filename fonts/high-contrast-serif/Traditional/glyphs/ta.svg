@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <path transform="translate(-1000,947.6378)" style="fill:#000000;fill-opacity:1;stroke:none" d="m 1000,-747.63782 0,40 40,0 0,220 c 0,200 250,200 360,60 l 0,160 c 0,50 -30,80 -80,80 l 0,40 80,0 120,0 80,0 0,-40 c -50,0 -80,-30 -80,-80 l 0,-440 120,0 0,-40 -640,0 z m 160,40 240,0 0,240 c -90,110 -240,80 -240,-20 l 0,-220 z"/>
+</svg>
