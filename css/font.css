@@ -11,3 +11,10 @@
     local("Bhaataan-HighContrast"),
     url("../fonts/high-contrast/Traditional/Bhaataan-HighContrast.woff") format("woff");
 }
+
+@font-face{
+    font-family: Bhaataan-HighContrast-Serif;
+    src:
+    local("Bhaataan-HighContrast-Serif"),
+    url("../fonts/high-contrast-serif/Traditional/Bhaataan-HighContrast-Serif.woff") format("woff");
+}
