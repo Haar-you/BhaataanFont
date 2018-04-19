@@ -16,20 +16,24 @@
     <div id="bhaataan">
     </div>
 
-    <div id="divInstruction">
+    <div id="divMisc">
       コピー用<br>
       á í ú ṭ ḍ ṇ ḷ ṣ<br>
       <br>
 
       <div>
 	フォント切り替え<br>
-	<select id="selectFont" onchange="changeFont()">
-	  <option value="Bhaataan">SansSerif体</option>
-	  <option value="Bhaataan-HighContrast">HighContrast体</option>
-	</select>
+	
+	<form id="formFont">
+	  <input type="radio" name="radioFont" onclick="changeFont2()" value="Bhaataan"><span style="font-family: Bhaataan;"> </span>
+	  <input type="radio" name="radioFont" onclick="changeFont2()" value="Bhaataan-HighContrast"><span style="font-family: Bhaataan-HighContrast;"> </span>
+	  <input type="radio" name="radioFont" onclick="changeFont2()" value="Bhaataan-HighContrast-Serif"><span style="font-family: Bhaataan-HighContrast-Serif;"> </span>
+	</form>
+
 	<br>
-	<input type="checkbox" id="checkAbbr">縮約表記を有効 (現在HighContrast体のみ対応)</input><br>
+	<br>
 	表記法<br>
+	<input type="checkbox" id="checkAbbr">縮約表記を有効</input><br>
 	<form id="formSystem">
 	  <input type="radio" name="radioSystem" value="traditional" checked>伝統表記</input>
 	  <input type="radio" name="radioSystem" value="modern">現代表記</input>

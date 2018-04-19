@@ -246,12 +246,19 @@ function convertTraditional(){
 function changeFont(){
     var select = document.getElementById("selectFont");
     var option = select.selectedOptions[0];
-    var div = document.getElementById("bhaataan");    
+    var div = document.getElementById("bhaataan");
 
     div.style.fontFamily = option.value;
 }
 
+
+function changeFont2(){
+    var form = document.getElementById("formFont");
+    var div = document.getElementById("bhaataan");    
+    div.style.fontFamily = form.radioFont.value;
+}
+
 window.addEventListener("load", function(){
-    changeFont();
+    changeFont2();
 });
 
