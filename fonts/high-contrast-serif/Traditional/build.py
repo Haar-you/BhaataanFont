@@ -74,7 +74,7 @@ def add_vowel_au(font):
     gl.importOutlines("./glyphs/au.svg");
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
-    gl.addAnchorPoint("no_vowel", "base", 290, 280);
+    gl.addAnchorPoint("no_vowel", "base", 290, 250);
     
     gl = font[0xe028];
     gl.addReference("bhaataan_au_raw", psMat.translate(200,0));
@@ -89,12 +89,12 @@ def add_vowel_u(font):
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
     gl.width = 0;
-    gl.addAnchorPoint("vowel_u", "mark", 145, 250);
+    gl.addAnchorPoint("vowel_u", "mark", 158.5, 250);
 
     gl = font["bhaataan_uq_raw"];
     gl.addReference("bhaataan_u_raw", psMat.translate(100, 0));
     gl.addReference("bhaataan_no_vowel_raw");
-    gl.addAnchorPoint("vowel_u", "mark", 245, 250);
+    gl.addAnchorPoint("vowel_u", "mark", 258.5, 250);
     gl.addPosSub("VQ_liga-1", ("bhaataan_u_raw", "bhaataan_no_vowel_raw"));
   
     gl = font[0xe021];
@@ -109,12 +109,12 @@ def add_vowel_aa(font):
     gl.left_side_bearing = 0;
     gl.right_side_bearing = 0;
     gl.width = 0;
-    gl.addAnchorPoint("vowel_aa", "mark", 240, 250);
+    gl.addAnchorPoint("vowel_aa", "mark", 160, 250);
 
     gl = font["bhaataan_aaq_raw"];
     gl.addReference("bhaataan_aa_raw", psMat.translate(100, 0));
     gl.addReference("bhaataan_no_vowel_raw");
-    gl.addAnchorPoint("vowel_aa", "mark", 340, 250);
+    gl.addAnchorPoint("vowel_aa", "mark", 260, 250);
     gl.addPosSub("VQ_liga-1", ("bhaataan_aa_raw", "bhaataan_no_vowel_raw"));
     
     gl = font[0xe022];
