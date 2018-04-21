@@ -19,7 +19,9 @@ window.addEventListener("load", function(){
 	if(elem.getAttribute("data-bhat") != null){
 	    var rec = parseInt(elem.getAttribute("data-bhat-rec")) || 1;
 	    var writing = elem.getAttribute("data-bhat-writing") || "Traditional"; //Modern or Traditional
-	    var abbr = elem.getAttribute("data-bhat-abbr") || false;
+	    var abbr = (elem.getAttribute("data-bhat-abbr") != null);
+
+	    console.log(abbr);
 	    
 	    func(elem, rec, writing, abbr);
 	}
